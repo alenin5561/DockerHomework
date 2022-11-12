@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    volumes:
+      - /custom/mount:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_USER=alenin55661
+      - POSTGRES_DB=data_base
+      - PGDATA=/var/lib/postgresql/data/pgdata
